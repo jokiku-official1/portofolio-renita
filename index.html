@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#838F58" />
+    <title>Portofolio Renita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Renita home">R</a>
+
+      <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-title-wrap">
+          <h1>a <em>portfolio.</em></h1>
+        </div>
+        <div class="hero-stage">
+          <div class="stage-card card-back">
+            <b>Collect<br />moments.</b>
+          </div>
+          <div class="stage-card card-front">
+            <div class="photo-placeholder">
+              <img
+                src="assets/images/renita-photo.jpg"
+                alt="Foto Renita"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.hidden = false;
+                "
+              />
+              <div class="photo-fallback" hidden>PHOTO HERE</div>
+            </div>
+            <span class="photo-label">2026 - RENITA</span>
+          </div>
+
+          <span class="floating-star star-a">✳</span><span class="floating-star star-b">✳</span>
+        </div>
+        <div class="hero-bottom"><span>RENITA</span><span class="scroll-line"></span></div>
+      </section>
+
+      <section class="about section-pad" id="about">
+        <div class="section-index"><span>02 / A LITTLE ABOUT ME</span><span>THE PERSON BEHIND THE PAGE</span></div>
+        <div class="about-layout">
+          <div class="about-photo reveal">
+            <img
+              src="assets/images/renita-photo.jpg"
+              alt="Foto Renita"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.hidden = false;
+              "
+            />
+            <div class="about-photo-fallback" hidden>RENITA<br /></div>
+            <span class="photo-caption">ABOUT ME</span>
+          </div>
+          <div class="about-text reveal">
+            <h2>About <em>me.</em></h2>
+            <p class="lead">Hai, aku Renita.</p>
+            <p>Aku senang mengeksplorasi hal-hal baru, mencari inspirasi dari sekitar, dan menuangkan ide menjadi sesuatu yang menarik. Aku menikmati proses belajar, mencoba, dan mengembangkan kreativitas melalui pengalaman sehari-hari.</p>
+            <p>Bagiku, setiap proses adalah kesempatan untuk mengenal kemampuan diri dan terus berkembang.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section-pad" id="projects">
+        <div class="section-index"><span>03 / THE WORKSHELF</span><span>SELECTED EXPERIMENTS — 2026</span></div>
+        <div class="project-intro reveal">
+          <h2>Creativity<br />in <em>montion.</em></h2>
+        </div>
+        <div class="work-list" id="project-list"></div>
+      </section>
+
+      <section class="contact section-pad" id="contact">
+        <div class="section-index"><span>04 / CONTACT</span></div>
+        <div class="contact-layout">
+          <div class="contact-heading reveal">
+            <h2>Let's start<br />a <em>conversation.</em></h2>
+            <p>Have a question or want to say hello?</p>
+          </div>
+          <form class="message-form reveal" id="contactForm">
+            <div class="form-title"><span>SEND A MESSAGE</span></div>
+            <label for="name">NAME</label><input id="name" name="name" placeholder="Name goes here" maxlength="80" required /> <label for="email">EMAIL</label
+            ><input id="email" name="email" type="email" placeholder="you@example.com" maxlength="120" required />
+            <div class="message-label"><label for="message">MESSAGE</label><span id="counter">0 / 300</span></div>
+            <textarea id="message" name="message" maxlength="300" rows="4" placeholder="Write a little something..." required></textarea>
+            <button type="submit" class="submit-button"><span>SEND MESSAGE</span><b>↗</b></button>
+            <small id="form-note"></small>
+          </form>
+        </div>
+        <div class="social-row">
+          <div class="social-links">
+            <a href="https://www.tiktok.com/@nadin5930921340431?_r=1&_t=ZS-9BYFT3ggPvV" target="_blank" rel="noreferrer">TIKTOK ↗</a><a href="mailto:prenitaadinda@gmail.com">EMAIL ↗</a><a href="https://github.com/renita437" target="_blank" rel="noreferrer">GITHUB ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="project-modal" id="project-viewer" aria-hidden="true">
+      <button class="modal-close" type="button" aria-label="Tutup">×</button>
+      <div class="modal-content">
+        <div class="modal-art"></div>
+        <div class="modal-info">
+          <span>PROJECT PREVIEW</span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <a class="brand" href="#home">R</a
+      ><span>AN ONGOING WORK IN PROGRESS.</span><a href="#home">BACK TO THE TOP ↑</a>
+    </footer>
+  </body>
+</html>
